@@ -1,0 +1,12 @@
+torch
+torchvision
+scikit-learn
+tqdm
+pandas
+timm
+onnx
+onnx-tf
+tensorflow==2.13.1
+keras==2.13.1
+tensorflow-probability[tf]==0.20.1
+imageio

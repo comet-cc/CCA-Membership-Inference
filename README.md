@@ -25,8 +25,14 @@ The MIA attack code is adapted from:
 
 ## 🧪 Running the Experiments
 
-To start the membership inference experiments, run:
-
+To start the membership inference experiments, install requirements:
+```
+python3 -m venv venv1
+source venv1/bin/activate
+pip install -r requirement.txt
+```
+Check and run the following script:
 ```
 ./scripts/experiment.sh
 ```
+Results of the experiments will be available at `./results/membership/${experiment_name}/last.json`. Note that `mode0_last_acc` is the accuracy of **blackbox** attack, while `mode3_last_acc` is for **whitebox** attack. 

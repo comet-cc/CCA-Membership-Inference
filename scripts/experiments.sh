@@ -2,14 +2,12 @@ set -x
 export PYTHONPATH=../:$PYTHONPATH
 
 # Define multiple values for RATE and MODEL
-RATES=("1" "4" "8")  # Example rates, you can modify these as needed
-#RATES=("8")
-#MODELS=("alexnet" "mobilenet")  # Example models, you can modify these as needed
+#RATES=("1" "4" "8")  # Example rates, you can modify these as needed
+RATES=("1")
+#MODELS=("alexnet" "resnet18")  # Example models, you can modify these as needed
 MODELS=("resnet18")
-#MODELS=("mobilenet")
-#DATASETS=("downsampled-imagenet")
-#DATASETS=("tiny-imagenet")
-DATASETS=("CIFAR100" "CIFAR10" "stl10")
+#DATASETS=("6-celeba" "CIFAR100" "CIFAR10")
+DATASETS=("CIFAR10")
 # Loop through all datasets, models, and rates
 for DATASET in  "${DATASETS[@]}"
 do
@@ -24,7 +22,7 @@ do
         -e 100 \
         --lr 1e-2 \
         --rate $RATE \
-        --pretrained
+        --pretrained &
     done
   done
 done

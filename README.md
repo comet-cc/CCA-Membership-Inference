@@ -33,6 +33,6 @@ pip install -r requirement.txt
 ```
 Check and run the following script:
 ```
-./scripts/experiment.sh
+./scripts/experiments.sh
 ```
 Results of the experiments will be available at `./results/membership/${experiment_name}/last.json`. Note that `mode0_last_acc` is the accuracy of **blackbox** attack, while `mode3_last_acc` is for **whitebox** attack. 
